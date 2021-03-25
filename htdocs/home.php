@@ -149,7 +149,7 @@
             }
 
             for($i=$block_start; $i<=$block_end; $i++)
-            {//for문 반복문을 사용하여, 초기값을 블록의 시작번호를 조건으로 블록시작번호가 마지박블록보다 작거나 같을 때까지 $i를 반복시킨다
+            {//for문 사용하여, 초기값을 블록의 시작번호를 조건으로 블록시작번호가 마지박블록보다 작거나 같을 때까지 $i를 반복시킨다
                 if($page == $i) //만약 page가 $i와 같다면 버튼 비활성화
                 {
                     ?>
@@ -197,88 +197,6 @@
     </ul>
 </nav>
 
-
-
-
-
-
-<!--<div id="page_num" style="display: block; text-align: center;">-->
-<!--    <ul class="pagination justify-content-center pagination-sm">-->
-<!--        --><?php
-//        if($page <= 1)
-//        { //만약 page가 1보다 작거나 같다면
-//            echo "<li class='fo_re page-item'>처음</li>"; //처음이라는 글자에 빨간색 표시
-//        }
-//        else
-//        {
-//            echo "<li class='page-item'><a href='?page=1'>처음</a></li>"; //아니라면 처음글자에 1번페이지로 갈 수있게 링크
-//        }
-//
-//        if($page <= 1)
-//        { //만약 page가 1보다 크거나 같다면 빈값
-//
-//        }
-//        else
-//        {
-//            $pre = $page-1; //pre변수에 page-1을 해준다 만약 현재 페이지가 3인데 이전버튼을 누르면 2번페이지로 갈 수 있게 함
-//            echo "<li><a href='?page=$pre'>이전</a></li>"; //이전글자에 pre변수를 링크한다. 이러면 이전버튼을 누를때마다 현재 페이지에서 -1하게 된다.
-//        }
-//
-//        for($i=$block_start; $i<=$block_end; $i++){
-//            //for문 반복문을 사용하여, 초기값을 블록의 시작번호를 조건으로 블록시작번호가 마지박블록보다 작거나 같을 때까지 $i를 반복시킨다
-//            if($page == $i){ //만약 page가 $i와 같다면
-//                echo "<li class='fo_re'>[$i]</li>"; //현재 페이지에 해당하는 번호에 굵은 빨간색을 적용한다
-//            }else{
-//                echo "<li><a href='?page=$i'>[$i]</a></li>"; //아니라면 $i
-//            }
-//        }
-//
-//        if($block_num >= $total_block)//만약 현재 블록이 블록 총개수보다 크거나 같다면 빈 값
-//        {
-//
-//        }
-//        else
-//        {
-//            $next = $page + 1; //next변수에 page + 1을 해준다.
-//            echo "<li><a href='?page=$next'>다음</a></li>"; //다음글자에 next변수를 링크한다. 현재 4페이지에 있다면 +1하여 5페이지로 이동하게 된다.
-//        }
-//
-//        if($page >= $total_page)//만약 page가 페이지수보다 크거나 같다면
-//        {
-//            echo "<li class='fo_re'>마지막</li>"; //마지막 글자에 긁은 빨간색을 적용한다.
-//        }
-//        else
-//        {
-//            echo "<li><a href='?page=$total_page'>마지막</a></li>"; //아니라면 마지막글자에 total_page를 링크한다.
-//        }
-//        ?>
-<!--    </ul>-->
-<!--</div>-->
-
-
-<!--<div style="display: block; text-align: center;">-->
-<!--    <ul class="pagination justify-content-center pagination-sm">-->
-<!--        <c:if test="${paging.startPage != 1 }">-->
-<!--            <li class="page-item"><a href="/home?nowPage=${paging.startPage - 2 }&cntPerPage=${paging.cntPerPage}" class="page-link">&lt;</a></li>-->
-<!--        </c:if>-->
-<!--        <c:forEach begin="${paging.startPage}" end="${paging.endPage}" var="p">-->
-<!--            <c:choose>-->
-<!--                <c:when test="${p == paging.nowPage }">-->
-<!--                    <li class="page-item active"><a href="#" class="page-link"><b>${p }</b></a></li>-->
-<!--                </c:when>-->
-<!--                <c:when test="${p != paging.nowPage }">-->
-<!--                    <li class="page-item"><a href="/home?nowPage=${p}&cntPerPage=${paging.cntPerPage}" class="page-link">${p }</a></li>-->
-<!--                </c:when>-->
-<!--            </c:choose>-->
-<!--        </c:forEach>-->
-<!--        <c:if test="${paging.startPage +5 < paging.lastPage}">-->
-<!--            <li class="page-item"><a href="/home?nowPage=${paging.startPage +5 }&cntPerPage=${paging.cntPerPage}" class="page-link">다음</a></li>-->
-<!--        </c:if>-->
-<!--        <c:if test="${paging.endPage != paging.lastPage}">-->
-<!--            <li class="page-item"><a href="/home?nowPage=${paging.endPage+2 }&cntPerPage=${paging.cntPerPage}" class="page-link">&gt;</a></li>-->
-<!--        </c:if>-->
-<!--    </ul>-->
-<!--</div>-->
 
 
 </body>
